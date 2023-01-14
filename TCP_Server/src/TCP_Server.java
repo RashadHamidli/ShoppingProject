@@ -4,5 +4,7 @@ public class TCP_Server {
         System.out.println("Check add new change");
         System.out.println("add intellij");
         System.out.println("null");
+        System.out.println("new test");
+        
     }
 }
