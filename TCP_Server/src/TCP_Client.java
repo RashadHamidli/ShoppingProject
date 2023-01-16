@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 
 public class TCP_Client {
     public static void main(String[] args) throws Exception {
-        Socket socket = new Socket("127.0.0.1", 55555);
+        Socket socket = new Socket("192.168.1.101", 55555);
         OutputStream outputStream= socket.getOutputStream();
         DataOutputStream dataOutputStream= new DataOutputStream(outputStream);
 
