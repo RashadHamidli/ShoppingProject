@@ -6,10 +6,13 @@ import java.nio.charset.StandardCharsets;
 
 public class TCP_Client {
     public static void main(String[] args) throws Exception {
-        Socket socket = new Socket("localhost", 55555);
+        Socket socket = new Socket("127.0.0.1", 55555);
         OutputStream outputStream= socket.getOutputStream();
         DataOutputStream dataOutputStream= new DataOutputStream(outputStream);
-        dataOutputStream.write("test".getBytes(StandardCharsets.UTF_8));
+
+        byte[] bytes=FileUtility.readBytes("C:\\Users\\mr_ra\\OneDrive\\Desktop\\ET\\894842.jpg");
+        dataOutputStream.writeInt(bytes.length);
+        dataOutputStream.write(bytes);
         socket.close();
     }
 }
